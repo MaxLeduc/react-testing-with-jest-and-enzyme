@@ -1,4 +1,18 @@
 import checkPropTypes from 'check-prop-types';
+import { createStore } from 'redux';
+
+import rootReducer from '../src/reducers';
+
+/**
+  * Create a testing store with imported reducers, middleware, and initial state.
+  * globals: rootReducer.
+  * @param {object} initialState - Initial state for store.
+  * @function storeFactory
+  * @returns {store} - Redux store.
+*/
+export const storeFactory = (initialState) => {
+  return createStore(rootReducer, initialState);
+}
 
 /**
   * Return ShallowWrapper container node(s) with the given data-test value.
@@ -12,10 +26,10 @@ export const findByTestAttr = (wrapper, val) => {
 }
 
 /**
-  * Return check value depending on if the proptypes are correct.
+  * Return test result value regarding the comformity of proptypes.
   * @param {ShallowWrapper} component - Enzyme shallow wrapper to test props.
   * @param {object} conformingProps - props to test.
-  * @returns test
+  * @returns test results
 */
 
 export const checkProps = (component, conformingProps) => {
