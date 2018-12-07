@@ -37,13 +37,6 @@ describe('redux props', () => {
     expect(guessedWordsProp).toBe(guessedWords);
   })
 
-  test('has `secretWord` as a piece of state', () => {
-    const secretWord = 'party';
-    const wrapper = setup({ secretWord });
-    const secretWordProp = wrapper.instance().props.secretWord;
-    expect(secretWordProp).toBe(secretWord);
-  })
-
   test('`getSecretWord` action creator is a function prop', () => {
     const wrapper = setup();
     const getSecretWordProp = wrapper.instance().props.getSecretWord;
