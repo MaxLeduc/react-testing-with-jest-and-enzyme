@@ -27,7 +27,7 @@ export class UnconnectedInput extends Component {
       <form className="form-inline">
         <input 
           data-test="input-box"
-          className="mb-2 mx-sm-3"
+          className="form-control mb-2 mr-sm-3"
           id="word-guess"
           type="text"
           placeholder="enter guess"

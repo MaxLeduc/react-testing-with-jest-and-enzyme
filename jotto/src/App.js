@@ -16,13 +16,12 @@ export class UnconnectedApp extends Component {
 
   render() {
     const {
-      secretWord,
       success,
       guessedWords,
     } = this.props;
 
     return (
-      <div className="container" data-test="app-component">
+      <div className="container my-sm-3" data-test="app-component">
         <h1>Jotto</h1>
         <Congrats success={success} />
         <Input />
@@ -32,11 +31,10 @@ export class UnconnectedApp extends Component {
   }
 }
 
-const mapStateToProps = ({success, guessedWords, secretWord}) => {
+const mapStateToProps = ({success, guessedWords}) => {
   return {
     success,
     guessedWords,
-    secretWord,
   }
 }
 
