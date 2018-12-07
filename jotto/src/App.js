@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import './App.css';
 
-import { guessWord } from './actions';
+import { getSecretWord } from './actions';
 import GuessedWords from './guessedWords-component/GuessedWords';
 import Congrats from './congrats-component/Congrats';
 import Input from './input-component/Input';
@@ -42,7 +42,7 @@ const mapStateToProps = ({success, guessedWords, secretWord}) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getSecretWord: bindActionCreators(guessWord, dispatch),
+    getSecretWord: bindActionCreators(getSecretWord, dispatch),
   }
 }
 
